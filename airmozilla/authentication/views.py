@@ -101,12 +101,7 @@ class CustomBrowserIDVerify(Verify):
     IMG_SRC='cdn.auth0.com',
 )
 def signin(request):
-    context = {
-        'AUTH0_CLIENT_ID': settings.AUTH0_CLIENT_ID,
-        'AUTH0_DOMAIN': settings.AUTH0_DOMAIN,
-        'AUTH0_CALLBACK_URL': settings.AUTH0_CALLBACK_URL,
-    }
-    return render(request, 'authentication/signin.html', context)
+    return redirect("https://onlinexperiences.com/scripts/Server.nxp?LASCmd=L:0&AI=1&InitialDisplay=1&ClientBrowser=0&ShowKey=44908")
 
 
 def signout(request):
