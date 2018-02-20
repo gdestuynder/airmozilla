@@ -5,24 +5,10 @@
 Sign In | {{ super() }}
 {% endblock %}
 
-{% block extra_head %}
-{{ super() }}
-<meta name="auth0-client-id" content="{{ AUTH0_CLIENT_ID }}">
-<meta name="auth0-domain" content="{{ AUTH0_DOMAIN }}">
-<meta name="auth0-callback-url" content="{{ AUTH0_CALLBACK_URL }}">
-{% endblock %}
-
 {% block site_css %}
   {{ super() }}
   {% stylesheet 'signin' %}
 {% endblock %}
-
-{% block site_js %}
-  {{ super() }}
-  <script src="https://cdn.auth0.com/js/lock-passwordless-2.2.min.js"></script>
-  {% javascript 'signin' %}
-{% endblock %}
-
 
 {% block content_main %}
   <h2 class="section-title">Sign In</h2>
